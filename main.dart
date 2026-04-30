@@ -40,24 +40,88 @@
 
 
 
-import 'dart:io';
+// import 'dart:io';
  
- double total(double a , double b) {
-   return a + b;
- }
+//  double total(double a , double b) {
+//    return a + b;
+//  }
 
 
- void showexpense(String title1, double amount1, String title2, double amount2) {
-   print('Expense: $title1, Amount: $amount1');
-   print('Expense: $title2, Amount: $amount2');
- }
+//  void showexpense(String title1, double amount1, String title2, double amount2) {
+//    print('Expense: $title1, Amount: $amount1');
+//    print('Expense: $title2, Amount: $amount2');
+//  }
 
- void main() {
-  String title1 = 'lunch';
-  double amount1= 250.0;
-  String title2 = 'coffee';
-  double amount2 = 150.0;
-  showexpense(title1, amount1, title2, amount2);
-  double totalExpense = total(amount1, amount2);
-  print('Total Expenses: $totalExpense');
- }
+//  void main() {
+//   String title1 = 'lunch';
+//   double amount1= 250.0;
+//   String title2 = 'coffee';
+//   double amount2 = 150.0;
+//   showexpense(title1, amount1, title2, amount2);
+//   double totalExpense = total(amount1, amount2);
+//   print('Total Expenses: $totalExpense');
+//  }
+
+// import 'dart:io';
+
+// double total(double a , double b) {
+//   return a + b;
+// }
+
+// void showexpense(String title1, double amount1, String title2, double amount2) {
+//   print('Expense: $title1, Amount: $amount1');
+//   print('Expense: $title2, Amount: $amount2');
+// }
+
+// void main(){
+//   print('enter first expense title');
+//   String title1 = stdin.readLineSync()!;
+//   print('enter first expense amount');
+//   double amount1 = double.parse(stdin.readLineSync()!);
+//   print('enter second expense title');
+//   String title2 = stdin.readLineSync()!;  
+//   print('enter second expense amount');
+//   double amount2 = double.parse(stdin.readLineSync()!);
+//   showexpense(title1, amount1, title2, amount2);
+//   double totalExpense = total(amount1, amount2);
+//   print('Total Expenses: $totalExpense');
+// }
+
+
+import 'dart:io';
+void main() {
+  print('enter a number');
+  int num = int.parse(stdin.readLineSync()!);
+  if(num % 2 == 0) {
+    print('$num is even');
+  } else {
+    print('$num is odd');
+  }
+  // for prime number or not 
+  bool isPrime = true;
+  if(num <= 1) {
+    isPrime = false;
+  } else {
+    for(int i=2; i<= num ~/ 2; i++) {
+      if(num % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+  }
+
+  if(isPrime) {
+    print('$num is prime');
+  } else {
+    print('$num is not prime');
+  }
+
+  //factorial of a number 
+  int number = 1;
+  for(int i=1; i<= num; i++) {
+    number *= i;
+  }
+  print('Factorial of $num is $number');
+}
+
